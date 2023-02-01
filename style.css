@@ -1,0 +1,35 @@
+/* body {
+  width: 100%;
+  height: 100vh;
+  background: url("https://r4.wallpaperflare.com/wallpaper/412/873/158/anime-weathering-with-you-hina-amano-hodaka-morishima-hd-wallpaper-86c784274048e3ba7e2385c953ca96cd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.main-login {
+  width: 660px;
+  margin: 7rem auto;
+}
+
+.edit-delete-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 7%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .showUsers {
+  position: relative;
+} */
+
+.user-section {
+  position: relative;
+}
+
+.fa-trash:hover {
+  color: red;
+}
