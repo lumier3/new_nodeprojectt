@@ -6,7 +6,7 @@ const emailTag = document.querySelector(".getEmail");
 const passwordTag = document.querySelector(".getPassword");
 let id;
 let userssssss;
-fetch("http://localhost:3000/users")
+fetch("https://newproject-8gy1.onrender.com/users")
   .then((res) => res.json())
   .then((data) => {
     id = data.length + 1;
@@ -14,7 +14,7 @@ fetch("http://localhost:3000/users")
 
 const fetchData = async () => {
   // fetching data to display UI
-  const data = "http://localhost:3000/users";
+  const data = "https://newproject-8gy1.onrender.com/users";
   const dataFromServer = await fetch(data);
   const response = await dataFromServer.json();
   for (let i = 0; i < response.length; i++) {
@@ -46,7 +46,7 @@ const handleClick = async () => {
     email,
     password,
   };
-  const response = fetch("http://localhost:3000/users", {
+  const response = fetch("https://newproject-8gy1.onrender.com/users", {
     method: "POST",
     body: JSON.stringify(formData),
   });
@@ -77,7 +77,9 @@ const deleteUserBtn = async (e) => {
 const editUserDivTwo = document.createElement("div");
 
 const editUserBtn = async (e) => {
-  const dataFromServer = await fetch("http://localhost:3000/users");
+  const dataFromServer = await fetch(
+    "https://newproject-8gy1.onrender.com/users"
+  );
 
   const response = await dataFromServer.json();
 
@@ -117,9 +119,12 @@ const userDeleteBin = async (e) => {
 
 const createFile = async () => {
   const fileUploadTag = document.querySelector("#fileUpload");
-  const response = await fetch("http://localhost:3000/fileUpload", {
-    method: "POST",
-    body: fileUploadTag.files[0],
-  });
+  const response = await fetch(
+    "https://newproject-8gy1.onrender.com/fileUpload",
+    {
+      method: "POST",
+      body: fileUploadTag.files[0],
+    }
+  );
   console.log(await response.json());
 };
