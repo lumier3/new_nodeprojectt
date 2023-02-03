@@ -62,7 +62,7 @@ const deleteUserBtn = async (e) => {
   const formData = {
     id,
   };
-  fetch("http://localhost:3000/users", {
+  fetch("https://newproject-8gy1.onrender.com/users", {
     method: "DELETE",
     body: JSON.stringify(formData),
   });
